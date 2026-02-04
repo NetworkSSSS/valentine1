@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine</title>
+
+    <!-- LINK TO CSS -->
+    <link rel="stylesheet" href="stlye.css">
+</head>
+
+<body>
+<h1 class="title">Dali ke bides mojot valentin ?  Simeon</h1>
+
+<div id="buttons">
+    <button id="yesBtn">Da</button>
+    <button id="noBtn">Ne</button>
+</div>
+
+<script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const title = document.querySelector('.title');
+
+    let yesSize = 16;
+    let noSize = 16;
+    let noClicks = 0;
+
+    yesBtn.style.fontSize = yesSize + 'px';
+    noBtn.style.fontSize = noSize + 'px';
+
+    yesBtn.addEventListener('click', () => {
+        yesSize += 4;
+        yesBtn.style.fontSize = yesSize + 'px';
+        title.textContent = "Fala bogu, se gledame na 14ti ❤️ - sega javi mi se";
+        yesBtn.disabled = true;
+        noBtn.disabled = true;
+    });
+
+    noBtn.addEventListener('click', () => {
+        noClicks++;
+
+        yesSize += 6;
+        yesBtn.style.fontSize = yesSize + 'px';
+
+        noSize = Math.max(10, noSize - 2);
+        noBtn.style.fontSize = noSize + 'px';
+
+        if (noClicks === 3) noBtn.textContent = "Sigurno li?";
+        else if (noClicks === 4) noBtn.textContent = "Aj be saaa!";
+        else if (noClicks === 5) noBtn.textContent = "Stvarno li!";
+        else if (noClicks === 6) noBtn.textContent = "De be saa";
+        else if (noClicks === 7) noBtn.textContent = "Posledno ne?";
+        else if (noClicks >= 8) {
+            noBtn.remove();
+            title.textContent = "E nema veke ne ";
+        }
+    });
+</script>
+</body>
+</html>

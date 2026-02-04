@@ -1,0 +1,65 @@
+body {
+    padding: 25px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+
+    background-image:
+            linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+            url('https://uploads.onecompiler.io/44bp68kqg/44bp6azqf/sweet-toy-poodle-puppy-festive-heart-shaped-gift-box-baby-animal-theme-300882352.webp');
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.title {
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 16px 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+#yesBtn {
+    background: linear-gradient(135deg, #ff5c5c, #ff8b8b);
+    color: white;
+}
+
+#noBtn {
+    background: rgba(255,255,255,0.85);
+    color: #333;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
